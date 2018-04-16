@@ -6,8 +6,8 @@ import {bindActionCreators} from 'redux';
 import {getBooks} from '../../actions/booksActions';
 import {Carousel,Grid, Col, Row, Button} from 'react-bootstrap';
 import BookItem from './bookItem';
-import BooksForm from './BooksForm';
-import Cart from './cart';
+
+
 
 
 
