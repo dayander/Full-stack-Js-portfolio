@@ -2,12 +2,12 @@
 
 
 //define books reducers
-export const booksReducer=(state={books: []}, action) =>{
+export const blogReducer=(state={posts: []}, action) =>{
     switch(action.type){
-        case 'GET_BOOKS':
+        case 'GET_POSTS':
 
             //
-            return {...state, books: [...action.payload] };
+            return {...state, posts: [...action.payload] };
             break;
 
         case 'POST_BOOK':
@@ -75,8 +75,8 @@ export const booksReducer=(state={books: []}, action) =>{
                     ...currentBookToUpdate.slice(indexToUpdate +
                         1)]};
             break;
-        return state - action.payload;
-        break;
+            return state - action.payload;
+            break;
         case 'DECREMENT':
             return state - action.payload;
             break;

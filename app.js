@@ -10,6 +10,7 @@ var logger = require('morgan');
 var httpProxy = require('http-proxy');
 
 var requestHandler = require('./requestHandler');
+var blogHandler = require('./blogHandler');
 
 
 
@@ -28,14 +29,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 //PROXY TO API
 
 const apiProxy = httpProxy.createProxyServer({
-    target:"http://localhost:3001"
+    target:"http://localhost:4001"
 });
 app.use('/api', function(req, res){
 
     apiProxy.web(req, res);
 })
 //
-app.use(requestHandler);
+
+
+
+
+
+app.get('/blog', blogHandler);
+app.get('/post/:title', blogHandler);
+
+app.get('*', requestHandler);
+
+// app.use(requestHandler);
 
 
 // catch 404 and forward to error handler

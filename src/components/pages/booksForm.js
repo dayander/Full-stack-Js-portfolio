@@ -148,7 +148,7 @@ class BooksForm extends React.Component{
                             <FormGroup
                                 controlId="formControlsSelect">
                                 <ControlLabel>Select a book id to
-                                    delete</ControlLabel>
+                                    delete</ControlLabel>x  x
                                 <FormControl ref="delete"
                                              componentClass="select" placeholder="select">
                                     <option

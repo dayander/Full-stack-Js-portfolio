@@ -19,7 +19,7 @@ class BooksList extends React.Component{
     render(){
         const booksList = this.props.books.map((books, i)=>{
             return(
-                <Col xs={12} sm={6} md={4} key={i}>
+                <Col xs={12}  key={i}>
                     <BookItem  _id={books._id} title={books.title} images={books.images} description={books.description} price={books.price} />
 
                 </Col>

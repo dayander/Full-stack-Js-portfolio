@@ -9,10 +9,19 @@ import Menu from './components/menu';
 import Footer from './components/footer';
 // END REACT- ROUTER
 
-import BooksList from './components/pages/booksList';
+
 import Cart from './components/pages/cart';
+import ContactForm from './components/pages/contactForm';
 import BooksForm from './components/pages/booksForm';
+import HomePage from './components/pages/homePage';
+import BlogPostList from './components/pages/blogPostList';
+import BlogPostItem from './components/pages/blogPostItem';
+import Admin from './components/admin/Admin';
+import ProjectList from './components/projectList';
+import ProjectTemplate from './components/projects/projectTemplate';
 //import Main from './main';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // RETRIVES COMPONENTS BASED ON STATUS
 const Status = function ({ code, children }){
@@ -37,14 +46,36 @@ const NotFound = function(){
 
 // CLIENT-SERVER SHARED ROUTES
 const routes = (
-    <div>
-        <Menu />
+    <div  >
+        <Menu  />
+
+
+
         <Switch>
-            <Route exact={true} path="/" component={BooksList}/>
-            <Route path="/admin" component={BooksForm}/>
-            <Route path="/cart" component={Cart}/>
+
+
+            <Route exact={true} path="/" component={HomePage}/>
+
+
+
+            <Route exact={true} path="/work" component={ProjectList}/>
+
+
+            <Route path="/vim" component={ProjectTemplate}/>
+            <Route path="/alc" component={ProjectTemplate}/>
+            <Route path="/comom" component={ProjectTemplate}/>
+            <Route path="/contact" component={ContactForm}/>
+            <Route path="/blog" component={BlogPostList}/>
+            <Route path="/post/:title" component={BlogPostItem}/>
+
+
+
+            <Route path="/admin" component={Admin}/>
+
             <Route component={NotFound}/>
         </Switch>
+
+
         <Footer />
     </div>
 );
