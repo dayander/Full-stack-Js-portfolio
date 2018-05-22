@@ -13,19 +13,16 @@ button .link {
 .header-image {
   margin-bottom: 0px !important; }
 
-.pullquote-inner {
-  border-left: solid 5px;
-  padding: 0 0 0 30px;
-  max-width: 960px;
-  margin: 0 auto; }
-
 .white {
   margin-bottom: 0px !important;
   background-color: #ffffff !important; }
 
 .project-large {
   height: 350px;
-  margin: 20px auto; }
+  margin: 20px auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .small {
   max-width: calc(50%- 1em); }
@@ -46,7 +43,8 @@ button .link {
 
 .overlay-effect {
   display: block;
-  box-shadow: 0 0 10px 0 #353535; }
+  box-shadow: 0 0 10px 0 #353535;
+  color: #fff !important; }
 
 .content {
   position: relative;
@@ -82,5 +80,18 @@ a:hover {
     background-color: #f1f1f1;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); }
+
+.image-center {
+  display: block;
+  margin: auto;
+  max-width: 100%; }
+
+.pullquote-inner {
+  border-left: solid 5px;
+  padding: 0 0 0 30px;
+  max-width: 960px;
+  margin: 0 auto; }
+  .pullquote-inner h2 {
+    color: #333333 !important; }
 
 /*# sourceMappingURL=style.css.map */

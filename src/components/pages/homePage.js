@@ -133,8 +133,9 @@ class HomePage extends React.Component{
 
         <PullQuote
             header={'Creating for Everyone'}
-            body={'I do lots of cool things. From design, to research to coding. ' +
-'If it challenges me ill do it'}
+            body={'I am an accessibility advocate. My interest ' +
+            'currently lies in web accessibility. I am passionate about ' +
+            'incorporating accessibility from the ground up in the design process.  '}
 />
                 <PullQuote
                     header={"Developing From the User's Perspective"}
@@ -144,9 +145,10 @@ class HomePage extends React.Component{
                       allows me to write more meaningful code for you.`}
                 />
                 <PullQuote
-                    header={'Creating for Everyone'}
-                    body={'I do lots of cool things. From design, to research to coding. ' +
-                    'If it challenges me ill do it'}
+                    header={'Design With Research'}
+                    body={'My background comes from design and creative thinking. ' +
+                    'Writing code is my new thing. I love combining my experience ' +
+                    'with deisgn and problem solving to make rad products people CAN use.'}
                 />
 
 

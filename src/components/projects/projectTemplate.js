@@ -5,6 +5,8 @@ import {bindActionCreators} from 'redux';
 import Header from "../Header";
 import PullQuote from "../pullQuote";
 import {Link} from 'react-router-dom';
+import Picture from "./Picture";
+import {Row, Col} from 'react-bootstrap';
 
 
 
@@ -61,12 +63,41 @@ console.log(this.props)
             <div ref='hey'>
 
 
-            <Header h1={this.state.project.companyName} h2={this.state.project.projectHeading}/>
+            <Header color={"#fff"} img={this.state.project.bgImage} h1={this.state.project.companyName} h2={this.state.project.projectHeading}/>
                 <PullQuote header={this.state.project.challengeHeading} body={this.state.project.challenge}/>
+                <Row >
+                    <div className="container">
+                    <Col xs={12} sm={6}>
+                <Picture img={this.state.project.challenge01.imgPath} alt={this.state.project.challenge01.altText}/>
+                    </Col>
+                        <Col xs={12} sm={6}>
+                <Picture img={this.state.project.challenge02.imgPath} alt={this.state.project.challenge02.altText} />
+                        </Col>
+                    </div>
+                </Row>
 
                 <PullQuote header={this.state.project.approachHeading} body={this.state.project.approach}/>
 
+                <Row >
+                    <div className="container">
+                    <Col xs={12} sm={6}>
+                        <Picture img={this.state.project.process01.imgPath} alt={this.state.project.process01.altText}/>
+                    </Col>
+                    <Col xs={12} sm={6}>
+                        <Picture img={this.state.project.process02.imgPath} alt={this.state.project.process02.altText} />
+                    </Col>
+                    </div>
+                </Row>
+
                 <PullQuote header={this.state.project.outcomeHeading} body={this.state.project.outcome}/>
+                <Row>
+                    <div className="container">
+                    <Col xs={12}>
+                        <Picture img={this.state.project.outcome01.imgPath} alt={this.state.project.outcome01.altText}/>
+
+                    </Col>
+                    </div>
+                </Row>
 
 
 

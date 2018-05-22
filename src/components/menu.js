@@ -23,12 +23,12 @@ class Menu extends React.Component{
 
                 <a className="skip-link screen-reader-text" href="#content">Skip to content</a>
             <Navbar inverse fixedTop>
-                {/*<Navbar.Header>*/}
-                    {/*<Navbar.Brand>*/}
-                        {/*<Link to="/">Anderson Day</Link>*/}
-                    {/*</Navbar.Brand>*/}
-                    {/*<Navbar.Toggle />*/}
-                {/*</Navbar.Header>*/}
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <Link to="/">Anderson Day</Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle />
+                </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
                         <LinkContainer to="/">

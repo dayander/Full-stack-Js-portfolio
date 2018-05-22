@@ -9,6 +9,7 @@ class Header extends React.Component{
             h1: this.props.h1,
             h2: this.props.h2,
             img: this.props.img,
+            color: this.props.color
 
         }
     }
@@ -19,7 +20,7 @@ class Header extends React.Component{
         return(
             <div>
                 <div style={{ backgroundImage: `url(${this.state.img})`}} className='jumbotron header-image'>
-                    <div className='container'>
+                    <div style={{color: this.state.color}} className='container'>
                         <h1>{this.state.h1}</h1>
                         {(this.state.h2)?(h2):('')}
 
